@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+          strip-prefix: true
+    zookeeper:
+      connect-string: zookeeper:2181
+      discovery:
+        enabled: true
